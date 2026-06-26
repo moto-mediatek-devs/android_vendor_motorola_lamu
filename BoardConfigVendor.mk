@@ -3,7 +3,6 @@
 #
 
 AB_OTA_PARTITIONS += \
-    dtbo \
     gz \
     lk \
     modem \

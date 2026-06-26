@@ -6,7 +6,6 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),lamu)
 
-$(call add-radio-file-sha1-checked,radio/dtbo.img,746ea9905bbe4296dfeee0d31f5f43e350c521ff)
 $(call add-radio-file-sha1-checked,radio/gz.img,02b5d492b99894b7b6c9c0d2e753b2d03d96f11c)
 $(call add-radio-file-sha1-checked,radio/lk.img,391189af5515ab3340111ce7d0c4cf2567de1dcc)
 $(call add-radio-file-sha1-checked,radio/modem.img,616d5c60c76479c487748bba896a72fac0525185)
