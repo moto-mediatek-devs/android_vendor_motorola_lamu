@@ -201,7 +201,10 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/lamu/proprietary/vendor/firmware/aw963xx_reg_0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw963xx_reg_0.bin \
     vendor/motorola/lamu/proprietary/vendor/firmware/fs1801.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs1801.fsm \
     vendor/motorola/lamu/proprietary/vendor/firmware/fs1815.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs1815.fsm \
-    vendor/motorola/lamu/proprietary/vendor/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu
+    vendor/motorola/lamu/proprietary/vendor/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu \
+    vendor/motorola/lamu/proprietary/vendor/firmware/txpowerctrl.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl.cfg \
+    vendor/motorola/lamu/proprietary/vendor/firmware/txpowerctrl16.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl16.cfg \
+    vendor/motorola/lamu/proprietary/vendor/firmware/txpowerctrllite.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrllite.cfg
 
 PRODUCT_PACKAGES += \
     gc05a2_mipi_raw_IdxMgr \
