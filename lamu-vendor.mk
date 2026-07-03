@@ -196,12 +196,16 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/lamu/proprietary/vendor/etc/camera/swad.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/camera/swad.cfg \
     vendor/motorola/lamu/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
     vendor/motorola/lamu/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
+    vendor/motorola/lamu/proprietary/vendor/etc/init/init.fmradio_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fmradio_drv.rc \
     vendor/motorola/lamu/proprietary/vendor/etc/init/trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trustonic.rc \
     vendor/motorola/lamu/proprietary/vendor/firmware/aw87xxx_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw87xxx_acf.bin \
     vendor/motorola/lamu/proprietary/vendor/firmware/aw963xx_reg_0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw963xx_reg_0.bin \
+    vendor/motorola/lamu/proprietary/vendor/firmware/fm_cust.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/fm_cust.cfg \
     vendor/motorola/lamu/proprietary/vendor/firmware/fs1801.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs1801.fsm \
     vendor/motorola/lamu/proprietary/vendor/firmware/fs1815.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs1815.fsm \
     vendor/motorola/lamu/proprietary/vendor/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu \
+    vendor/motorola/lamu/proprietary/vendor/firmware/mt6631_fm_v1_coeff.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6631_fm_v1_coeff.bin \
+    vendor/motorola/lamu/proprietary/vendor/firmware/mt6631_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6631_fm_v1_patch.bin \
     vendor/motorola/lamu/proprietary/vendor/firmware/txpowerctrl.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl.cfg \
     vendor/motorola/lamu/proprietary/vendor/firmware/txpowerctrl16.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl16.cfg \
     vendor/motorola/lamu/proprietary/vendor/firmware/txpowerctrllite.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrllite.cfg
