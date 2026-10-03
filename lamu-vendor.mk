@@ -194,6 +194,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/lamu/proprietary/vendor/etc/camera/superiq_model_speed_front_main:$(TARGET_COPY_OUT_VENDOR)/etc/camera/superiq_model_speed_front_main \
     vendor/motorola/lamu/proprietary/vendor/etc/camera/superiq_model_speed_rear_main:$(TARGET_COPY_OUT_VENDOR)/etc/camera/superiq_model_speed_rear_main \
     vendor/motorola/lamu/proprietary/vendor/etc/camera/swad.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/camera/swad.cfg \
+    vendor/motorola/lamu/proprietary/vendor/etc/camera/vidhance.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance.lic \
     vendor/motorola/lamu/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
     vendor/motorola/lamu/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/motorola/lamu/proprietary/vendor/etc/init/trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trustonic.rc \
@@ -213,6 +214,8 @@ PRODUCT_PACKAGES += \
     gc08a8_mipi_raw_tuning \
     gc08a8spy_mipi_raw_IdxMgr \
     gc08a8spy_mipi_raw_tuning \
+    gc50f6_mipi_raw_IdxMgr \
+    gc50f6_mipi_raw_tuning \
     android.hardware.camera.provider@2.6-impl-mediatek \
     audio.primary.mt6768 \
     vendor.mediatek.hardware.camera.atms_aidl@1.0-impl \
@@ -231,12 +234,13 @@ PRODUCT_PACKAGES += \
     lib3a.gma \
     lib3a.lce \
     lib3a.log \
-    lib3a.n3d3a \
     libBSTSWAD \
     libJpgEncPipe \
     libSQLiteModule_VER_ALL \
     lib_bsscore \
     libabfadp \
+    libanc_sn \
+    libanc_sn_check_moto_lamu \
     libaudio_param_parser-vnd \
     libcam.chdr \
     libcam.feature_utils \
@@ -266,12 +270,10 @@ PRODUCT_PACKAGES += \
     libcamalgo.lmv \
     libcamalgo.lsc \
     libcamalgo.mfnr \
-    libcamalgo.n3d \
     libcamalgo.nr \
     libcamalgo.platform \
     libcamalgo.platform2 \
     libcamalgo.utility \
-    libcamalgo.vsf \
     libcamalgo.warp \
     libcamdrv_isp \
     libcamdrv_tuning_mgr \
@@ -282,7 +284,6 @@ PRODUCT_PACKAGES += \
     libeffecthal.base \
     libfeature.face \
     libfeature.stereo.provider \
-    libfeature.vsdof.hal \
     libfeature_3dnr \
     libfeature_eis \
     libfeature_fsc \
@@ -294,6 +295,7 @@ PRODUCT_PACKAGES += \
     libimageio_plat_drv \
     libimageio_plat_pipe \
     libimgsensorca \
+    libispcameraca \
     libjpeg-alpha-oal_vendor \
     libjpeg-alpha_vendor \
     liblpcnr \
@@ -303,7 +305,6 @@ PRODUCT_PACKAGES += \
     libmtkcam.debugwrapper \
     libmtkcam.eventcallback \
     libmtkcam.featurepipe.capture \
-    libmtkcam.featurepipe.depthmap \
     libmtkcam.featurepipe.streaming \
     libmtkcam.featurepipe.vsdof_util \
     libmtkcam.logicalmodule \
@@ -322,7 +323,6 @@ PRODUCT_PACKAGES += \
     libmtkcam_device3_utils \
     libmtkcam_devicesessionpolicy \
     libmtkcam_diputils \
-    libmtkcam_dpe \
     libmtkcam_exif \
     libmtkcam_fdvt \
     libmtkcam_featurepolicy \

@@ -6,6 +6,7 @@ soong_namespace {
     imports: [
         "device/motorola/lamu",
         "hardware/mediatek",
+        "hardware/mediatek/libion_mtk",
         "vendor/motorola/mt6768-common",
     ],
 }
@@ -150,6 +151,58 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gc50f6_mipi_raw_IdxMgr",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/gc50f6_mipi_raw_IdxMgr.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gc50f6_mipi_raw_tuning",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/gc50f6_mipi_raw_tuning.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libmtkcam.atmseventmgr",
                 "libc++",
                 "libc",
                 "libm",
@@ -772,34 +825,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.n3d3a",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib3a.n3d3a.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "lib3a.log",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libBSTSWAD",
     owner: "motorola",
     strip: {
@@ -966,6 +991,55 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libanc_sn",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libanc_sn.so",
+            ],
+            shared_libs: [
+                "libz",
+                "liblog",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libanc_sn_check_moto_lamu",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libanc_sn_check_moto_lamu.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libm",
+                "libdl",
+                "libc",
             ],
         },
     },
@@ -1253,7 +1327,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcam.hal3a.v3.so",
             ],
             shared_libs: [
-                "lib3a.n3d3a",
                 "lib3a.ccudrv",
                 "lib3a.ccuif",
                 "libion",
@@ -1912,34 +1985,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.n3d",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcamalgo.n3d.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libnativewindow",
-                "libEGL",
-                "libGLESv3",
-                "libcamalgo.platform",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libcamalgo.nr",
     owner: "motorola",
     strip: {
@@ -2039,31 +2084,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libEGL",
                 "libGLESv2",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcamalgo.vsf",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcamalgo.vsf.so",
-            ],
-            shared_libs: [
-                "libcamalgo.platform",
                 "libc++",
                 "libc",
                 "libm",
@@ -2258,6 +2278,7 @@ cc_prebuilt_library_shared {
                 "vendor.mediatek.hardware.power@1.1",
                 "libmtkcam_modulehelper",
                 "s5kjnssq_mipi_raw_IdxMgr",
+                "gc50f6_mipi_raw_IdxMgr",
                 "ov08d10_mipi_raw_IdxMgr",
                 "gc05a2_mipi_raw_IdxMgr",
                 "gc08a8_mipi_raw_IdxMgr",
@@ -2266,6 +2287,7 @@ cc_prebuilt_library_shared {
                 "sc520cs_mipi_raw_IdxMgr",
                 "libmtkcam.atmseventmgr",
                 "s5kjnssq_mipi_raw_tuning",
+                "gc50f6_mipi_raw_tuning",
                 "ov08d10_mipi_raw_tuning",
                 "gc05a2_mipi_raw_tuning",
                 "gc08a8_mipi_raw_tuning",
@@ -2407,52 +2429,6 @@ cc_prebuilt_library_shared {
                 "libsync",
                 "libmtkcam.logicalmodule",
                 "libfeatureiodrv_mem",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libfeature.vsdof.hal",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libfeature.vsdof.hal.so",
-            ],
-            shared_libs: [
-                "libcamalgo.n3d",
-                "libcamalgo.vsf",
-                "libmtkcam_ulog",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libnativewindow",
-                "libmtkcam_modulehelper",
-                "libmtkcam_stdutils",
-                "libmtkcam_imgbuf",
-                "libnvram",
-                "libcameracustom",
-                "libdpframework",
-                "libmtkcam_metadata",
-                "libmtkcam_metastore",
-                "libgralloc_extra",
-                "libcam.iopipe",
-                "libsync",
-                "libfeature.stereo.provider",
-                "libmtkcam_tuning_utils",
-                "libfeatureiodrv_mem",
-                "libmtkcam_calibration_provider",
                 "libc++",
                 "libc",
                 "libm",
@@ -2835,6 +2811,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libispcameraca",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libispcameraca.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libion_mtk",
+                "libcutils",
+                "libdmabufheap",
+                "libgz_uree",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libjpeg-alpha-oal_vendor",
     owner: "motorola",
     strip: {
@@ -3118,59 +3124,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmtkcam.featurepipe.depthmap",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmtkcam.featurepipe.depthmap.so",
-            ],
-            shared_libs: [
-                "libcamalgo.fdft",
-                "liblog",
-                "libnativewindow",
-                "libutils",
-                "libcutils",
-                "libmtkcam_modulehelper",
-                "libcam.iopipe",
-                "libmtkcam_stdutils",
-                "libmtkcam_imgbuf",
-                "libmtkcam_ulog",
-                "libfeature.vsdof.hal",
-                "libfeature.stereo.provider",
-                "libeffecthal.base",
-                "libgralloc_extra",
-                "libfeature.face",
-                "libmtkcam_metadata",
-                "libmtkcam.featurepipe.vsdof_util",
-                "libcameracustom",
-                "libmtkcam_dpe",
-                "libJpgEncPipe",
-                "libmtkcam_exif",
-                "libsync",
-                "libdpframework",
-                "libion",
-                "libion_mtk",
-                "libmtkcam_tuning_utils",
-                "libcam.feature_utils",
-                "libladder",
-                "libfeatureiodrv_mem",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmtkcam.featurepipe.streaming",
     owner: "motorola",
     strip: {
@@ -3210,11 +3163,8 @@ cc_prebuilt_library_shared {
                 "libcamalgo.eis",
                 "libmtkcam_scenariorecorder",
                 "libmtkcam_hwutils",
-                "libfeature.vsdof.hal",
                 "libfeature_eis",
                 "libcameracustom.eis",
-                "libmtkcam.featurepipe.depthmap",
-                "libmtkcam.featurepipe.vsdof_util",
                 "libJpgEncPipe",
                 "libmtkcam_exif",
                 "libmtkcam_metadata",
@@ -3360,7 +3310,6 @@ cc_prebuilt_library_shared {
                 "libmtkcam_tuning_utils",
                 "libcam.hal3a.v3.lsctbl",
                 "libundistort_impl",
-                "libcam.iopipe",
                 "libfeature.stereo.provider",
                 "libmtkcam_hwutils",
                 "libmtkcam_modulehelper",
@@ -3875,33 +3824,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmtkcam_dpe",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmtkcam_dpe.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libmtkcam_stdutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmtkcam_exif",
     owner: "motorola",
     strip: {
@@ -4317,7 +4239,6 @@ cc_prebuilt_library_shared {
                 "lib3a.awb.core",
                 "lib3a.af.core",
                 "lib3a.ae.core",
-                "libfeature.stereo.provider",
                 "libmediandk",
                 "libexif",
                 "libc++",
@@ -4344,7 +4265,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libmtkcam_hwutils.so",
             ],
             shared_libs: [
-                "libfeature.stereo.provider",
                 "liblog",
                 "libmtkcam_ulog",
                 "libutils",
